@@ -1,0 +1,40 @@
+\setupoutput[pdftex]
+\setupbodyfont[plr,11pt]
+\mainlanguage[de]
+\language[de]
+\enableregime[utf]
+
+\setuphead[title][style={\ss\bfd},
+% hier wird das Aussehen des Titels definiert
+    before={\begingroup},
+    after={Hans Wikipedianer\bigskip\endgroup}]
+
+\starttext
+
+\title{\ConTeXt}
+
+\section{Text}
+Genau so wie \LaTeX{} macht es auch \ConTeXt{}
+einfach, den Text durch eine
+Abschnittsnummerierung sowie durch Verweise
+auf Tabellen, Zeichnungen und andere Elemente
+zu gliedern. So kann man ganz einfach auf
+Gleichung \in[eqn:gleichung100] verweisen.
+
+\section{Mathematik}
+Die folgende Gleichung stellt die
+Möglichkeiten von \ConTeXt{} auf dem Gebiet
+mathematischer Formeln dar. Gleichungen können
+automatisch nummeriert werden.
+\placeformula[eqn:gleichung100]
+\startformula
+    E = mc^2
+\stopformula
+worin
+\placeformula[eqn:gleichung200]
+\startformula
+    m = \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}
+\stopformula
+ist.
+
+\stoptext
